@@ -108,10 +108,33 @@ new_list = china_unesco_sites[-5:]
 
 # BEGIN PROBLEM 6 SOLUTION
 unesco_sites = []
+junk = []
 for site in china_unesco_sites:
     if 'Cultural' in site:
-        unesco_sites.append(site.replace(',',' - '))
-#print(unesco_sites)
+        unesco_sites.append(site.split(','))
+for site in unesco_sites:
+        country = site.pop(0)
+        heritage_site_name = site.pop(0)
+        year = site.pop(-1)
+        #print(country)
+        #print(heritage_site_name)
+        #print(year)
+        print(f"{country}  - {heritage_site_name}  -  {year}")
+#for i in unesco_sites:
+    #junk.append.i.pop(2))
+    #china = i.pop(0)
+    #heritage_site_name = i.pop(1)
+    #year = i.pop(-1)
+#for item in unesco_sites:
+    #item.replace(',',' - ')
+    #i.replace(',',' - ')
+        #unesco_sites = unesco_sites.split(',')
+#for i in unesco_sites:
+        #unesco_sites = i.split(',')
+        #china_unesco_sites = china_unesco_sites[2]
+        #unesco_sites.append(site.replace(',',' - '))
+
+
 
 
 # END PROBLEM 6 SOLUTION
